@@ -1,0 +1,81 @@
+.sb-toggle-right { display:none; } 
+
+@media (max-width:1200px) {
+
+	html, body, #sb-site, .sb-site-container, .sb-slidebar { margin:0; padding:0; -webkit-box-sizing:border-box;  -moz-box-sizing:border-box; box-sizing:border-box;  }
+
+	html, body { width:100%; overflow-x:hidden; }
+
+	html { height:100%; }
+
+	body { min-height:100%; height:auto; position:relative; }
+
+	html.sb-scroll-lock.sb-active:not(.sb-static) { overflow:hidden; }
+
+	
+
+	#sb-site, .sb-site-container { width:100%; min-height:100px; position:relative; z-index:1; }
+
+	#sb-site:before, #sb-site:after, .sb-site-container:before, .sb-site-container:after { content:' '; display:table; }
+
+	#sb-site:before, #sb-site:after, .sb-site-container:before, .sb-site-container:after { clear:both; }
+
+	
+
+	
+
+	.sb-slidebar { height:100%; overflow-y:auto; position:absolute; top:0; z-index:0; display:none; }
+
+	.sb-slidebar, .sb-slidebar * { -webkit-transform:translateZ( 0px ); }
+
+	.sb-left { left:-240px; }
+
+	.sb-right { right:-240px; }
+
+	html.sb-static .sb-slidebar,.sb-slidebar.sb-static { position:absolute;  /* Makes Slidebars scroll naturally with the site, and unfixes them for Android Browser < 3 and iOS < 5. */ }
+
+	.sb-slidebar.sb-active { display:block; height:inherit;  /* Makes Slidebars visibile when open. Changed from visibility to display to allow -webkit-overflow-scrolling. */ }
+
+	.sb-style-overlay { z-index:9999;  /* Set z-index high to ensure it overlays any other site elements. */ }
+
+	.sb-momentum-scrolling { -webkit-overflow-scrolling:touch;  /* Adds native momentum scrolling for iOS & Android devices. */ }
+
+	
+
+	.sb-slidebar { width:240px; }
+
+	.sb-width-thin { width:240px; }
+
+	.sb-width-wide { width:240px; }
+
+	
+
+	.sb-slide, #sb-site, .sb-site-container, .sb-slidebar { -webkit-transform:translate( 0px ); -moz-transform:translate( 0px ); -o-transform:translate( 0px ); transform:translate( 0px ); -webkit-transition:-webkit-transform 400ms ease; -moz-transition:-moz-transform 400ms ease; -o-transition:-o-transform 400ms ease; transition:transform 400ms ease; -webkit-transition-property:-webkit-transform, left, right; /* Add left/right for Android < 4.4. */-webkit-backface-visibility:hidden;  /* Prevents flickering. This is non essential, and you may remove it if your having problems with fixed background images in Chrome. */ }
+
+	
+
+	.sb-hide { display:none;  /* Optionally applied to control classes when Slidebars is disabled over a certain width. */ }	
+
+
+
+	.sb-toggle-right { position:absolute; top:10px; right:12px; z-index:999; display:inline-block; width:38px; height:38px; background:#15a1a9; cursor:pointer; z-index:9999;}
+
+	.sb-toggle-right span { position:relative; display:block; margin:auto; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease; }
+
+	.sb-toggle-right span:after, .sb-toggle-right span:before { content:""; position:absolute; left:0; top:-7px; -moz-transition:all 0.3s ease; -o-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease; }
+
+	.sb-toggle-right span:after { top:7px; }
+
+	.sb-toggle-right span:after, .sb-toggle-right span:before, .sb-toggle-right span { width:19px; height:3px; background-color:#ffffff; backface-visibility:hidden; }
+
+	.sb-toggle-right span:before, .sb-toggle-right span:after { -webkit-transition-duration:0.3s, 0.3s; transition-duration:0.3s, 0.3s; -webkit-transition-delay:0.3s, 0s; transition-delay:0.3s, 0s; -webkit-transition-property:top, -webkit-transform; transition-property:top, transform; }
+
+	.sb-toggle-right.active span { transition:background .3s 0s ease; background:transparent; }
+
+	.sb-toggle-right.active span:before, .sb-toggle-right.active span:after { top:0; -webkit-transition-delay:0s, 0.3s; transition-delay:0s, 0.3s; }
+
+	.sb-toggle-right.active span:before { -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); }
+
+	.sb-toggle-right.active span:after { -webkit-transform:rotate(-45deg); -ms-transform:rotate(-45deg); transform:rotate(-45deg); }
+
+}

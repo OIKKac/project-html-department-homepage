@@ -1,0 +1,60 @@
+@charset "euc-kr";
+/*========================================================
+                    SITEMAP
+=========================================================*/
+
+.sitemapBox {width:100%; display:table; border-collapse:collapse; }
+.sitemapBox .floorTr {display:table-row;}
+.sitemapBox .floorTr > div {display:table-cell; background:#fff; width:33.3%; background:#fafbfc; border:2px solid #fff; }
+.sitemapBox .floorTr .blank {border:0; background:none; }
+.sitemapBox dt {border-top:2px solid #555; padding:15px; font-weight:600; font-size:16px; color:#555f8a; background:linear-gradient(to top, #f3f4f7, #f8f9fa); border-bottom:1px solid #d9d9dc; }
+.sitemapBox dd {padding:10px 15px 20px; }
+.sitemapBox li {padding:5px 0; }
+.sitemapBox li > a {display:block; line-height:20px; color:#777; padding-left:10px; background:url('../images/comm/blt_dot_lg.html') no-repeat 0 10px; background-size:3px; }
+.sitemapBox li > a:hover {color:#555f8a; }
+@media (max-width:960px) {
+	.sitemapBox {display:block; }
+	.sitemapBox .floorTr {display:block;}
+	.sitemapBox .floorTr > div {display:block; width:100%; border:0; }
+	.sitemapBox .floorTr .blank {display:none; }
+	.sitemapBox dt {padding:10px 15px; font-size:14px; }
+	.sitemapBox dd {padding:10px 15px 20px; }
+	.sitemapBox li > a {font-size:13px; }
+}
+.con_box{ margin-bottom: 35px; }
+.con_box .left_con{ float:left; width:15%; }
+.con_box .right_con{ float:left; width:83%; margin-left:2%; }
+
+.con_box:after{ clear:both; display:block; content:""; }
+.con_box .left_con img{ display:block; border-radius:5px; border:1px solid #ddd; }
+.con_box ul.list_box li{ word-break:break-all; }
+.con_box p.name{ font-size:1.15em; padding:15px 0; font-weight: 600; }
+.con_box span.small{ color:#bd204c; margin-left:10px; font-size:0.92em; line-height:26px;  }
+@media (max-width:767px) {
+.con_box .left_con{ display:block; width:30%;}
+.con_box .left_con img{ width:100%; }
+.con_box .right_con{ float:left; width:65%; margin-left:5%; }
+}
+
+@media (max-width:420px) {
+.con_box .left_con{ float:none; width:100%;}
+.con_box .left_con img{ width:50%; display:block; margin:0 auto; }
+.con_box .right_con{ float:none; width:100%; margin-left:0;  }
+.con_box p.name{ text-align: center; font-size:1.1em; padding:15px 0; }
+}
+
+/*FAQ*/
+button.accordion { background-color: #eee; border-radius:5px; color: #444; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 15px; transition: 0.4s; line-height:22px;}
+button.accordion.active, button.accordion:hover { background-color: #ddd; }
+button.accordion:after { content: '\002B'; color: #777; font-weight: bold; float: right; margin-left: 5px;}
+button.accordion.active:after { content: "\2212"; }
+div.panel { padding: 18px; background-color: white; max-height: 0; overflow: hidden; transition: 0.6s ease-in-out; opacity: 0; }
+div.panel.show { opacity: 1; max-height: 700px; }
+
+@media (max-width:767px) {
+button.accordion{ position:relative; padding:18px 24px; }	
+button.accordion:after { content: '\002B'; color: #777; font-weight: bold; float: right;  position:absolute; right:5%; top:35%; }
+button.accordion.active:after { content: "\2212"; }
+div.panel { padding: 18px 5px; background-color: white; max-height: 0; overflow: hidden; transition: 0.6s ease-in-out; opacity: 0; }
+div.panel.show { opacity: 1; max-height: 700px; }
+}
